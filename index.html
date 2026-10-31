@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Le 47 · Burgers, pizzas, tacos · 44 rue du Lot, Toulouse</title>
+<meta name="description" content="Le 47, snack de quartier au 44 rue du Lot à Toulouse : burgers, pizzas, tacos, sandwichs et assiettes barbecue. Sur place, à emporter ou en livraison sur Uber Eats et Deliveroo.">
+<meta name="theme-color" content="#160f0d">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Le 47 · Toulouse · Burgers, pizzas, tacos">
+<meta property="og:description" content="Sur place, à emporter ou en livraison. 44 rue du Lot, 31100 Toulouse · 05 67 06 69 69">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/unbounded-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Le 47",
+  "servesCuisine": ["Burgers", "Pizzas", "Tacos", "Sandwichs", "Barbecue"],
+  "telephone": "+33567066969",
+  "priceRange": "€",
+  "address": { "@type": "PostalAddress", "streetAddress": "44 rue du Lot", "postalCode": "31100", "addressLocality": "Toulouse", "addressCountry": "FR" },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "12:00",
+      "closes": "01:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/le47toulouse31/",
+    "https://www.ubereats.com/fr/store/le-47/Wgzlh7slUw2ZcWx2uCXz9w",
+    "https://deliveroo.fr/fr/menu/toulouse/la-cepiere-croix-de-pierre/le-47-burgers"
+  ],
+  "hasMenu": "#burgers"
+}
+</script>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<div class="backdrop" aria-hidden="true"></div>
+<canvas id="stage" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+
+<div class="loader" aria-hidden="true">
+  <div><b id="pct">0</b><span class="track"><i id="pctbar"></i></span>En cuisine</div>
+</div>
+
+<header class="bar">
+  <a class="mark" href="#top" aria-label="Le 47, retour en haut"><b>LE <span>47</span></b><small>Toulouse</small></a>
+  <div class="now"><span>Rubrique</span><b id="now">Accueil</b></div>
+  <div class="bar-right">
+    <a class="btn-ghost hide-m" href="tel:+33567066969" data-hover><span class="dot" aria-hidden="true"></span>05 67 06 69 69</a>
+    <a class="btn-ghost hot" href="#commander" data-hover>Commander</a>
+  </div>
+</header>
+
+<nav aria-label="Rubriques"><ol class="rail" id="rail"></ol></nav>
+
+<main id="top">
+
+  <!-- 1. Accueil -->
+  <section class="chap hero in" data-model="burger" data-label="Accueil">
+    <div class="wrap">
+      <div class="panel panel-lite">
+        <p class="hero-title" aria-hidden="true">LE <span>47</span></p>
+        <h1>Le 47 · Toulouse<small>Burgers · Pizzas · Tacos · Sandwichs barbecue<br>44 rue du Lot, 31100 Toulouse</small></h1>
+      </div>
+      <div class="side">
+        <p class="lede">Le snack du quartier rouvre ses portes. Des burgers généreux, des pizzas garnies, des tacos qui débordent&nbsp;: sur place, à emporter ou livrés chez vous.</p>
+        <div class="actions">
+          <a class="btn" href="tel:+33567066969" data-hover>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            Appeler pour commander</a>
+          <a class="btn alt" href="#burgers" data-hover>Voir la carte</a>
+        </div>
+        <div class="cue" aria-hidden="true"><i></i>Faites défiler</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Réouverture + promo -->
+  <section class="chap" data-model="menu" data-label="Réouverture" id="reouverture">
+    <div class="wrap"><div class="panel">
+      <div class="kicker">Après travaux</div>
+      <h2 class="split">Le 47 est <em>de retour.</em></h2>
+      <div class="date-card fade">
+        <div class="day">31<small>oct.</small></div>
+        <p>Réouverture le <b>samedi 31 octobre dès midi</b>. Toute l'équipe est ravie de vous retrouver, dans une ambiance conviviale, avec vos plats préférés.</p>
+      </div>
+      <div class="promo fade" data-until="2026-11-03T23:59:59+01:00">
+        <span class="tag">Super promo · du sam. 31 oct. au mar. 3 nov.</span>
+        <strong>1 menu acheté&nbsp;= le 2<sup>e</sup> à <span>moitié prix</span></strong>
+        <small>Sur toute la carte.</small>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- 3. Burgers -->
+  <section class="chap" data-model="mega" data-label="Burgers" id="burgers">
+    <div class="wrap"><div class="panel wide">
+      <div class="kicker">La carte · Burgers</div>
+      <h2 class="split">Nos burgers.</h2>
+      <p class="legend fade"><b>Seul</b> / <b>Menu</b> (avec frites et boisson)</p>
+      <ul class="menu fade">
+        <li><span class="n">Le 47 <span class="badge">Signature</span></span><span class="d">Steak 150 g, bacon, cheddar, oignons rouges, salade, tomate</span><span class="p">10 €<b>12 €</b></span></li>
+        <li><span class="n">Mega 47 <span class="badge gold">XXL</span></span><span class="d">Steak maison 150 g, œuf, bacon, galette de pomme de terre, chèvre ou cheddar, sauce maison, salade, tomate</span><span class="p">11,90 €<b>14,90 €</b></span></li>
+        <li><span class="n">Le Seguin</span><span class="d">Steak ×2, cheddar, chèvre, miel, salade, tomate</span><span class="p">8 €<b>10 €</b></span></li>
+        <li><span class="n">Le Egg Bacon</span><span class="d">Steak ×2, bacon, œuf, cheddar, salade, tomate</span><span class="p">8 €<b>10 €</b></span></li>
+        <li><span class="n">Le Fromager</span><span class="d">Steak ×2, cheddar, emmental, camembert, sauce poivre, salade, tomate</span><span class="p">8 €<b>10 €</b></span></li>
+        <li><span class="n">Toast Burger</span><span class="d">Steak ×2, jambon, double fromage fondu, salade, tomate, oignon</span><span class="p">8 €<b>10 €</b></span></li>
+        <li><span class="n">Le Chicken</span><span class="d">Escalope panée, cheddar, salade, tomate</span><span class="p">6,50 €<b>8,50 €</b></span></li>
+        <li><span class="n">Double Cheese</span><span class="d">Steak ×2, cheddar, sauce ketchup/moutarde, oignons rouges, cornichon</span><span class="p">6,50 €<b>8,50 €</b></span></li>
+        <li><span class="n">Cheese</span><span class="d">Steak, cheddar, sauce ketchup/moutarde, oignons rouges, cornichon</span><span class="p">5 €<b>7 €</b></span></li>
+      </ul>
+      <p class="legend fade">Suppléments burgers&nbsp;: miel, œuf, fromage, bacon, jambon <b>+1 €</b> · viande <b>+2 €</b></p>
+    </div></div>
+  </section>
+
+  <!-- 4. Pizzas -->
+  <section class="chap" data-model="pizza" data-label="Pizzas" id="pizzas">
+    <div class="wrap"><div class="panel wide">
+      <div class="kicker">La carte · Pizzas</div>
+      <h2 class="split">Nos pizzas.</h2>
+      <div class="sizes fade">
+        <span class="size"><i>26</i>26 cm <b>6 €</b></span>
+        <span class="size"><i>31</i>31 cm <b>8 €</b></span>
+      </div>
+      <ul class="menu two fade">
+        <li><span class="n">La 47 <span class="badge">Maison</span></span><span class="d">Tomate, jambon supérieur, merguez, viande hachée, emmental</span></li>
+        <li><span class="n">Chicago</span><span class="d">Tomate, sauce BBQ, viande hachée, oignons rouges, emmental</span></li>
+        <li><span class="n">4 Fromages</span><span class="d">Tomate ou crème, emmental, chèvre, mozza, roquefort</span></li>
+        <li><span class="n">Chèvre miel</span><span class="d">Crème fraîche, emmental, chèvre, miel</span></li>
+        <li><span class="n">Kebab</span><span class="d">Tomate ou crème, kebab, oignons rouges, poivrons, olives, emmental</span></li>
+        <li><span class="n">Avalanche</span><span class="d">Crème fraîche, lardons, pomme de terre, oignons rouges, reblochon, emmental</span></li>
+      </ul>
+      <details class="more fade">
+        <summary>Voir les 16 autres pizzas</summary>
+        <ul class="menu two">
+          <li><span class="n">Marguerite</span><span class="d">Tomate, emmental, olives</span></li>
+          <li><span class="n">Forestière</span><span class="d">Tomate, oignons rouges, tomate fraîche, poivrons, olives, emmental</span></li>
+          <li><span class="n">Royal</span><span class="d">Tomate, jambon supérieur, champignons, emmental</span></li>
+          <li><span class="n">Chèvre chaud</span><span class="d">Crème fraîche, jambon supérieur, champignons, chèvre, emmental</span></li>
+          <li><span class="n">Calzone</span><span class="d">Jambon supérieur ou viande hachée, œuf, emmental</span></li>
+          <li><span class="n">Orientale</span><span class="d">Tomate, merguez, oignons rouges, poivrons, olives, emmental</span></li>
+          <li><span class="n">Bacon</span><span class="d">Crème fraîche, viande hachée, bacon, pomme de terre, emmental</span></li>
+          <li><span class="n">Chorizo</span><span class="d">Tomate, chorizo, champignons, emmental</span></li>
+          <li><span class="n">Provençale</span><span class="d">Tomate, poulet, oignons rouges, poivrons, olives, emmental</span></li>
+          <li><span class="n">Paysanne</span><span class="d">Crème fraîche, jambon supérieur, oignons rouges, pomme de terre, emmental</span></li>
+          <li><span class="n">Indienne</span><span class="d">Crème fraîche, sauce curry, poulet, oignons rouges, poivrons, emmental</span></li>
+          <li><span class="n">Frenchy</span><span class="d">Crème fraîche, viande hachée, pomme de terre, emmental</span></li>
+          <li><span class="n">Sicilienne</span><span class="d">Tomate, anchois, tomate fraîche, olives, emmental</span></li>
+          <li><span class="n">Niçoise</span><span class="d">Tomate, thon, oignons rouges, poivrons, olives, emmental</span></li>
+          <li><span class="n">Fruits de mer</span><span class="d">Tomate, fruits de mer, persillade, emmental</span></li>
+          <li><span class="n">Norvégienne</span><span class="d">Crème fraîche, saumon, citron</span></li>
+        </ul>
+      </details>
+      <p class="legend fade">Viandes fraîches et légumes frais.</p>
+    </div></div>
+  </section>
+
+  <!-- 5. Tacos, sandwichs, barbecue -->
+  <section class="chap" data-model="tacos" data-label="Tacos & grill" id="tacos">
+    <div class="wrap"><div class="panel wide">
+      <div class="kicker">La carte · Tacos, sandwichs &amp; grill</div>
+      <h2 class="split">Tacos, sandwichs &amp; barbecue.</h2>
+      <p class="legend fade"><b>Seul</b> / <b>Menu</b> (avec frites et boisson)</p>
+      <ul class="menu fade">
+        <li><span class="n">47 Tacos</span><span class="d">Sauce fromagère, viande au choix (poulet, viande hachée, kebab, cordon bleu, tenders, nuggets), sauce au choix, tomate, oignon, frites</span><span class="p">8 €<b>10 €</b></span></li>
+        <li><span class="n">Pizza Sandwich 47 <span class="badge">Nouveau</span></span><span class="d">Base tomate ou crème, gratinée chèvre ou cheddar, 1 viande et 3 ingrédients au choix</span><span class="p">10 €<b>13 €</b></span></li>
+        <li><span class="n">L'Américain</span><span class="d">1 viande au choix (merguez, poulet, kefta), salade, tomates, oignons, cheddar</span><span class="p">8 €<b>10 €</b></span></li>
+        <li><span class="n">Assiette viande barbecue <span class="badge gold">Charbon de bois</span></span><span class="d">Brochette Adana, poulet mariné, kefta ou merguez, avec frites et boisson</span><span class="p">&nbsp;<b>12,90 €</b></span></li>
+      </ul>
+      <p class="legend fade">Suppléments&nbsp;: ingrédient <b>+1 €</b> · viande <b>+2 €</b></p>
+    </div></div>
+  </section>
+
+  <!-- 6. Commander -->
+  <section class="chap" data-model="sandwich" data-label="Commander" id="commander">
+    <div class="wrap"><div class="panel wide">
+      <div class="kicker">Commander</div>
+      <h2 class="split">Trois façons de se régaler.</h2>
+      <div class="ways fade">
+        <div class="way">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h2l3 11.5M5.5 17.5 9 9h6l3.5 8.5M9 9 7.5 6H5"/></svg></span>
+          <h3>En livraison</h3>
+          <p>Commandez sur votre application habituelle, un coursier vous livre.</p>
+          <div class="actions">
+            <a class="btn" href="https://www.ubereats.com/fr/store/le-47/Wgzlh7slUw2ZcWx2uCXz9w?utm_campaign=CM2508147-search-free-nonbrand-google-pas_e_all_acq_Global&amp;utm_medium=search-free-nonbrand&amp;utm_source=google-pas&amp;rwg_token=ALcMQYYNL2hkwQMKaRTQOsxix6LfRFX7h7eSJoWykTuwg3ITBb8EdNPqvT_iAVAfECXIdHaaj6mxn1pM3EiaflerDQcIxq5PnQ%3D%3D" target="_blank" rel="noopener" data-link="ubereats" data-hover>Uber Eats</a>
+            <a class="btn alt" href="https://deliveroo.fr/fr/menu/toulouse/la-cepiere-croix-de-pierre/le-47-burgers?utm_medium=affiliate&amp;utm_source=google_maps_link&amp;fulfillment_type=DELIVERY&amp;utm_campaign=delivery&amp;rwg_token=ALcMQYYQSpM53FVbFybaZx_B1AIojopb3Ukcblpr0_p-nXJe6_M4CMSfD3cI7gi7N1gfftpxiO76w8sShs87tM1oN3KPGLOVIQ%3D%3D" target="_blank" rel="noopener" data-link="deliveroo" data-hover>Deliveroo</a>
+          </div>
+        </div>
+        <div class="way">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg></span>
+          <h3>À emporter</h3>
+          <p>Appelez, on prépare votre commande, vous passez la récupérer encore chaude.</p>
+          <div class="actions"><a class="btn" href="tel:+33567066969" data-hover>Appeler le 05 67 06 69 69</a></div>
+        </div>
+        <div class="way">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h18M5 11V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v6M6 11v10M18 11v10M6 16h12"/></svg></span>
+          <h3>Sur place</h3>
+          <p>Une petite salle de quelques places, pour manger chaud sans attendre.</p>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- 7. Infos -->
+  <section class="chap" data-model="plate" data-label="Nous trouver" id="infos">
+    <div class="wrap"><div class="panel wide">
+      <div class="kicker">Nous trouver</div>
+      <h2 class="split">44 rue du Lot, Toulouse.</h2>
+      <a class="big-tel fade" href="tel:+33567066969" data-hover>05 67 06 69 69</a>
+      <dl class="facts fade">
+        <div><dt>Adresse</dt><dd>44 rue du Lot<br>31100 Toulouse</dd></div>
+        <div><dt>Horaires</dt><dd id="hours">Tous les jours (7j/7) · 12h00 à 01h00</dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/le47toulouse31/" target="_blank" rel="noopener">@le47toulouse31</a></dd></div>
+        <div><dt>Snapchat</dt><dd><a href="https://www.snapchat.com/add/le47-pizza" target="_blank" rel="noopener">LE47-PIZZA</a></dd></div>
+      </dl>
+      <div class="actions fade">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Le+47+44+rue+du+Lot+31100+Toulouse" target="_blank" rel="noopener" data-hover>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Itinéraire</a>
+        <a class="btn alt" href="#burgers" data-hover>Revoir la carte</a>
+      </div>
+    </div></div>
+  </section>
+
+  <footer class="wrap foot">
+    <span>© 2026 Le 47 · 44 rue du Lot, 31100 Toulouse · Prix indicatifs, susceptibles d'évoluer.</span>
+    <span>Maquette de démonstration réalisée par <a href="mailto:leandreelisha20@gmail.com">Léandre Elisha</a>. Visuels non contractuels.</span>
+  </footer>
+</main>
+
+<div class="dock">
+  <a class="btn" href="tel:+33567066969">Appeler</a>
+  <a class="btn alt" href="#commander">Livraison</a>
+</div>
+
+<script type="importmap">
+{ "imports": {
+  "three": "./vendor/three.module.min.js",
+  "three/addons/": "./vendor/jsm/"
+} }
+</script>
+<script type="module" src="main.js"></script>
+</body>
+</html>
